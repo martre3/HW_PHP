@@ -7,6 +7,6 @@ class Magic
 
     public function __construct()
     {
-        echo("Deep\Second\Magic has been successfully initialized");
+        echo("Deep\Second\Magic has been successfully initialized" . PHP_EOL);
     }
 }
