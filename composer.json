@@ -1,0 +1,10 @@
+{
+    "name": "root/hw_php",
+    "authors": [
+        {
+            "name": "Martynas Treinys",
+            "email": "martynas7928@gmail.com"
+        }
+    ],
+    "require": {}
+}
