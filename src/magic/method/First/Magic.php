@@ -5,8 +5,17 @@ namespace Deep\First;
 class Magic
 {
 
+    private $name;
+    private $hidden;
+
     public function __construct()
     {
-        echo("Deep\First\Magic has been successfully initialized" . PHP_EOL);
+        $this->name = "Deep\First\Magic";
+        echo($this->name . " has been successfully initialized" . PHP_EOL);
+    }
+
+    public function __destruct()
+    {
+         echo($this->name . " has been destroyed" . PHP_EOL);
     }
 }
