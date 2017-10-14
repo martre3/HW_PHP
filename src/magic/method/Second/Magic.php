@@ -1,7 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: martynas
- * Date: 17.10.14
- * Time: 15.30
- */
+
+namespace Deep\Second;
+
+class Magic
+{
+
+    public function __construct()
+    {
+        echo("Deep\Second\Magic has been successfully initialized");
+    }
+}
