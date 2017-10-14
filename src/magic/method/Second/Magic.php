@@ -5,7 +5,6 @@ namespace Deep\Second;
 class Magic
 {
     private $name;
-    private $hidden;
 
     public function __construct()
     {

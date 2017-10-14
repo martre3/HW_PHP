@@ -6,7 +6,6 @@ class Magic
 {
     private $data = array();
     private $name;
-    private $hidden;
 
     public function __construct()
     {
@@ -72,4 +71,16 @@ class Magic
         echo $this->name . ' has been successfully unserialized' . PHP_EOL;
     }
 
+    public function __toString()
+    {
+        return "My name is " . $this->name;
+    }
+
+    public function __debugInfo()
+    {
+        return [
+            'name' => $this->name,
+            'data' => $this->data
+        ];
+    }
 }

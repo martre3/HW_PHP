@@ -6,7 +6,6 @@ class Magic
 {
 
     private $name;
-    private $hidden;
 
     public function __construct()
     {

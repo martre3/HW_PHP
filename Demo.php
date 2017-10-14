@@ -26,6 +26,10 @@ $obj1 = null;//destroying object to avoid __destruct call after unserialize()
 $obj1 = unserialize($objectData);//testing __wakeup method
 echo PHP_EOL;
 
+echo $obj1 . PHP_EOL;//testing __toString method
+var_dump($obj1);//testing __debugInfo method
+echo PHP_EOL;
+
 
 
 
