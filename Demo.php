@@ -21,6 +21,13 @@ unset($obj1->newVar);//testing __unset
 var_dump(isset($obj1->newVar));
 echo PHP_EOL;
 
+$objectData = serialize($obj1);//testing __sleep method
+$obj1 = null;//destroying object to avoid __destruct call after unserialize()
+$obj1 = unserialize($objectData);//testing __wakeup method
+echo PHP_EOL;
+
+
+
 
 
 

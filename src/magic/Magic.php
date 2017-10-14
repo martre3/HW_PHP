@@ -60,4 +60,16 @@ class Magic
         echo "'" . $name . "' has been unset" . PHP_EOL;
         unset($this->data[$name]);
     }
+
+    public function __sleep()
+    {
+        echo "Serializing " . $this->name . PHP_EOL;
+        return array('data', 'name');
+    }
+
+    public function __wakeup()
+    {
+        echo $this->name . ' has been successfully unserialized' . PHP_EOL;
+    }
+
 }
