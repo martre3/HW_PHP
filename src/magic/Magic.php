@@ -49,4 +49,15 @@ class Magic
         echo "No property '" .$name . "' in object " . $this->name . PHP_EOL;
     }
 
+    public function __isset($name)
+    {
+        echo "Checking if '" . $name . "' is set" . PHP_EOL;
+        return isset($this->data[$name]);
+    }
+
+    public function __unset($name)
+    {
+        echo "'" . $name . "' has been unset" . PHP_EOL;
+        unset($this->data[$name]);
+    }
 }
