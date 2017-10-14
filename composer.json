@@ -6,5 +6,10 @@
             "email": "martynas7928@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Top\\": "src/magic",
+            "Deep\\": "src/magic/method"
+        }
+    }
 }
