@@ -83,4 +83,24 @@ class Magic
             'data' => $this->data
         ];
     }
+
+    public static function __set_state($dataArray)
+    {
+        $obj = new Magic();
+        $obj->name = $dataArray["name"];
+        $obj->data = $dataArray["data"];
+        return $obj;
+    }
+
+    public function __invoke($arg)
+    {
+        echo $this->name . " has been called as function with parameter's value '" . $arg . "'" . PHP_EOL;
+    }
+
+    public function __clone()
+    {
+        echo $this->name . " clone has been created" . PHP_EOL;
+        $this->data["Clone"] = true;
+    }
+
 }

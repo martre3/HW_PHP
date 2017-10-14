@@ -30,8 +30,15 @@ echo $obj1 . PHP_EOL;//testing __toString method
 var_dump($obj1);//testing __debugInfo method
 echo PHP_EOL;
 
+echo "Info about object: " . var_export($obj1, true);//exporting object data by using __set_state method
+echo PHP_EOL;
 
+$obj1("called");//testing __invoke method by calling object as function
+echo PHP_EOL;
 
+$obj3 = clone $obj1;//testing __clone method
+var_dump($obj1);//comparing results
+var_dump($obj3);//clone has variable in data array, confirming that cloning has been successful
+echo PHP_EOL;
 
-
-
+//End of file, all objects will now be destroyed
